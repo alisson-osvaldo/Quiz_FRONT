@@ -1,2 +1,2 @@
-# SistemaPizzaria_FRONT
+# Quiz_FRONT (Perguntas e respostas)
 C# - Angular

@@ -4,11 +4,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+// Import dos componentes da aplicação
 import { ListarJogadorComponent } from './componentes/views/jogador/listar-jogador/listar-jogador.component';
 import { CadastrarJogadorComponent } from './componentes/views/jogador/cadastrar-jogador/cadastrar-jogador.component';
 import { CadastrarQuestaoComponent } from './componentes/views/questao/cadastrar-questao/cadastrar-questao.component';
 import { ListarQuestaoComponent } from './componentes/views/questao/listar-questao/listar-questao.component';
-// Import dos componentes da aplicação
+import { HeaderComponent } from './componentes/template/header/header/header.component';
+import { FooterComponent } from './componentes/template/footer/footer/footer.component';
+import { LoginComponent } from './componentes/views/login/login/login.component';
+import { NavComponent } from './componentes/template/nav/nav/nav.component';
+
 
 
 
@@ -18,14 +37,31 @@ import { ListarQuestaoComponent } from './componentes/views/questao/listar-quest
     ListarJogadorComponent,
     CadastrarJogadorComponent,
     CadastrarQuestaoComponent,
-    ListarQuestaoComponent
+    ListarQuestaoComponent,
+    HeaderComponent,
+    FooterComponent,
+    LoginComponent,
+    NavComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatTableModule,
+    MatGridListModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

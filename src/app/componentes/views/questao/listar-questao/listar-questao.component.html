@@ -1,1 +1,21 @@
-<p>listar-questao works!</p>
+<mat-card>
+    <button mat-raised-button color="primary" routerLink="/questao/cadastrar">Adicionar nova pergunta</button>
+
+  <ol>
+    <li *ngFor="let questao of questoes">
+      {{ questao.nQuestao }}{{ questao.pergunta }}<br />
+      <h3>Selecione a resposta correta:</h3>
+
+      <mat-selection-list #respostas [multiple]="false">
+        <mat-list-option *ngFor="let questao of questoes" [value]="respostas">
+          {{ questao.respostaC }}
+        </mat-list-option>
+      </mat-selection-list>
+
+      <p>Option selected: {{ respostas.selectedOptions.selected[0]?.value }}</p>
+
+      <button mat-raised-button color="accent">Confirmar</button><br><br>
+      <!-- <a routerLink="/produto/cadastrar/{{ produto.id }}/{{}}">Editar Produto</a> -->
+    </li>
+  </ol>
+</mat-card>

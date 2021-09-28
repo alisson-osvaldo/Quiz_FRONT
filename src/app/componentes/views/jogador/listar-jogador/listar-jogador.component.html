@@ -1,8 +1,10 @@
-<a routerLink="/jogador/cadastrar">Novo jogador</a>
-
+<a mat-raised-button color="primary" routerLink="/questao/listar">
+    Jogar
+</a>
 <ol>
     <li *ngFor="let jogador of jogadores">
-        {{ jogador.nome }}
+        {{ jogador.nome }} <br> XP:{{jogador.pontuacao}}
+        <br><br>
         <!-- <a routerLink="/produto/cadastrar/{{ produto.id }}/{{}}">Editar Produto</a> -->
     </li>
 </ol>

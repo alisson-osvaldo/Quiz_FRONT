@@ -1,4 +1,7 @@
+import { Questao } from './../../../../models/questao';
+import { QuestaoService } from './../../../../services/questao.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastrar-questao',
@@ -6,10 +9,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastrar-questao.component.css']
 })
 export class CadastrarQuestaoComponent implements OnInit {
+    nQuestao!: string;
+    pergunta!:  string;
+    respostaC!:   string;
+    respostaF1!:   string;
+    respostaF2!:   string;
+    respostaF3!:   string;
+    ponto!:       number;
 
-  constructor() { }
+  constructor(private router: Router, private service: QuestaoService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  cadastrar( ): void{
+    let questao: Questao = {
+       nQuestao: this.nQuestao,
+       pergunta: this.pergunta,
+       respostaC: this.respostaC,
+       respostaF1: this.respostaF1,
+       respostaF2: this.respostaF2,
+       respostaF3: this.respostaF3,
+       ponto:     this.ponto
+    }
+    this.service.create(questao).subscribe((questao) => {
+      console.log(questao);
+      this.router.navigate(["questao/listar"]);
+   });
+}
 }

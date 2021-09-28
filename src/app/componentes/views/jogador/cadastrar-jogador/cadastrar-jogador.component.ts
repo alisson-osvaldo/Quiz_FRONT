@@ -9,20 +9,21 @@ import { JogadorService } from 'src/app/services/jogador.service';
   styleUrls: ['./cadastrar-jogador.component.css']
 })
 export class CadastrarJogadorComponent implements OnInit {
-    nome!:       string;
-    senha!:      string;
-    email!:      string;
+    nome!:        string;
+    senha!:        string;
+    email!:        string;
+    pontuacao!: number;
 
 constructor(private router: Router, private service: JogadorService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   cadastrar( ): void{
       let jogador: Jogador = {
          nome: this.nome,
          senha: this.senha,
-         email: this.email
+         email: this.email,
+         pontuacao: this.pontuacao
       }
       this.service.create(jogador).subscribe((jogador) => {
         console.log(jogador);

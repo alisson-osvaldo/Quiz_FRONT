@@ -11,14 +11,14 @@ export class JogadorService {
 
     constructor(private http: HttpClient) { }
 
-    //Métodos
+    //Método Listar
     list( ): Observable<Jogador[]> {
         return this.http.get<Jogador[]>(`${this.baseUrl}/list`);
     }
-
+    //Cadastrar
     create(jogador: Jogador): Observable<Jogador> {
         return this.http.post<Jogador>(`${this.baseUrl}/create`, jogador);
     }
 
-    
+
 }
