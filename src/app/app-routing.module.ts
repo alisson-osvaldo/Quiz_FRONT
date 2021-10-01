@@ -1,3 +1,5 @@
+import { JogarBuscarPerguntaComponent } from './componentes/views/jogar/jogar-buscar-pergunta/jogar-buscar-pergunta.component';
+import { ContaJogadorComponent } from './componentes/views/jogador/conta-jogador/conta-jogador.component';
 import { LoginComponent } from './componentes/views/login/login/login.component';
 import { ListarQuestaoComponent } from './componentes/views/questao/listar-questao/listar-questao.component';
 import { CadastrarQuestaoComponent } from './componentes/views/questao/cadastrar-questao/cadastrar-questao.component';
@@ -20,6 +22,10 @@ const routes: Routes = [
         path: "jogador/cadastrar",
         component: CadastrarJogadorComponent,
     },
+    {
+        path: "jogador/conta",
+        component: ContaJogadorComponent
+    },
     //----------------------Questões-------------------------------
     {
         path: "questao/cadastrar",
@@ -33,6 +39,11 @@ const routes: Routes = [
     {
         path: "login/entrar",
         component: LoginComponent,
+    },
+    //------------------------------Jogar--------------------------------
+    {
+        path: "jogar/Pergunta",
+        component: JogarBuscarPerguntaComponent,
     }
 
 ];

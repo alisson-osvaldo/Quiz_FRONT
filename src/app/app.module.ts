@@ -27,6 +27,10 @@ import { HeaderComponent } from './componentes/template/header/header/header.com
 import { FooterComponent } from './componentes/template/footer/footer/footer.component';
 import { LoginComponent } from './componentes/views/login/login/login.component';
 import { NavComponent } from './componentes/template/nav/nav/nav.component';
+import { ContaJogadorComponent } from './componentes/views/jogador/conta-jogador/conta-jogador.component';
+import { JogarBuscarPerguntaComponent } from './componentes/views/jogar/jogar-buscar-pergunta/jogar-buscar-pergunta.component';
+import { JogarEnviarRespostaComponent } from './componentes/views/jogar/jogar-enviar-resposta/jogar-enviar-resposta.component';
+
 
 
 
@@ -41,7 +45,11 @@ import { NavComponent } from './componentes/template/nav/nav/nav.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    NavComponent
+    NavComponent,
+    ContaJogadorComponent,
+    JogarBuscarPerguntaComponent,
+    JogarEnviarRespostaComponent
+
 
   ],
   imports: [

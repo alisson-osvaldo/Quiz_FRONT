@@ -1,21 +1,30 @@
-<mat-card>
-    <button mat-raised-button color="primary" routerLink="/questao/cadastrar">Adicionar nova pergunta</button>
-
-  <ol>
+<h1>Lista de Perguntas cadastradas</h1>
+<ol>
     <li *ngFor="let questao of questoes">
-      {{ questao.nQuestao }}{{ questao.pergunta }}<br />
-      <h3>Selecione a resposta correta:</h3>
-
-      <mat-selection-list #respostas [multiple]="false">
-        <mat-list-option *ngFor="let questao of questoes" [value]="respostas">
-          {{ questao.respostaC }}
-        </mat-list-option>
-      </mat-selection-list>
-
-      <p>Option selected: {{ respostas.selectedOptions.selected[0]?.value }}</p>
-
-      <button mat-raised-button color="accent">Confirmar</button><br><br>
-      <!-- <a routerLink="/produto/cadastrar/{{ produto.id }}/{{}}">Editar Produto</a> -->
+        {{ questao.pergunta }} <br> A:{{questao.respostaC}} <br> B:{{questao.respostaF1}} <br>
+        C:{{questao.respostaF2}} <br> D:{{questao.respostaF3}}
+        <br><br>
+        <!-- <a routerLink="/produto/cadastrar/{{ produto.id }}/{{}}">Editar Produto</a> -->
     </li>
-  </ol>
-</mat-card>
+</ol>
+
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened fixedInViewport="true" fixedTopGap="64">
+        <mat-nav-list>
+
+            <mat-list-item>
+                <mat-icon class="material-icons-outlined" mat-list-icon>app_registration</mat-icon>
+                <a mat-list-item routerLink="/questao/listar">Perguntas</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="material-icons-outlined" mat-list-icon>app_registration</mat-icon>
+                <a mat-list-item routerLink="/questao/cadastrar">Cadastrar Perguntas</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="material-icons-outlined" mat-list-icon>app_registration</mat-icon>
+                <a mat-list-item routerLink="/questao/deletar">Deletar Pergunta</a>
+            </mat-list-item>
+
+        </mat-nav-list>
+    </mat-sidenav>
+</mat-sidenav-container>

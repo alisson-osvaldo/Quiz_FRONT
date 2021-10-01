@@ -1,6 +1,4 @@
-<a mat-raised-button color="primary" routerLink="/questao/listar">
-    Jogar
-</a>
+<h1>Lista de Jogadores</h1>
 <ol>
     <li *ngFor="let jogador of jogadores">
         {{ jogador.nome }} <br> XP:{{jogador.pontuacao}}
@@ -8,3 +6,27 @@
         <!-- <a routerLink="/produto/cadastrar/{{ produto.id }}/{{}}">Editar Produto</a> -->
     </li>
 </ol>
+
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened fixedInViewport="true" fixedTopGap="64">
+        <mat-nav-list>
+            <mat-list-item>
+                <mat-icon class="material-icons-outlined" mat-list-icon>►</mat-icon>
+                <a mat-list-item routerLink="/questao/listar">Jogar</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="material-icons-outlined" mat-list-icon>app_registration</mat-icon>
+                <a mat-list-item routerLink="/questao/listar">Perguntas</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="material-icons-outlined" mat-list-icon>settings</mat-icon>
+                <a mat-list-item routerLink="/jogador/conta">Conta</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="material-icons-outlined" mat-list-icon>logout</mat-icon>
+                <a mat-list-item routerLink="">Sair</a>
+            </mat-list-item>
+
+        </mat-nav-list>
+    </mat-sidenav>
+</mat-sidenav-container>
