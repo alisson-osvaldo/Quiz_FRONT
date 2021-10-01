@@ -1,0 +1,15 @@
+<mat-card color= warn>
+    <mat-card-title> Deletar Pergunta </mat-card-title>
+
+    <mat-card-content>
+
+        <mat-form-field >
+            <mat-label for="nquestao">Informe qual questão será deletada:</mat-label>
+            <input matInput placeholder="Informe o número da Pergunta" type="string" name="nquestao" [(ngModel)]="nquestao"/>
+        </mat-form-field>
+        <mat-card-actions>
+            <button mat-raised-button color="warn" (click)="delete(nquestao)">Deletar</button>
+        </mat-card-actions>
+
+    </mat-card-content>
+</mat-card>

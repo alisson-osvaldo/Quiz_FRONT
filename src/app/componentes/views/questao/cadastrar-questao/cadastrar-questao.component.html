@@ -1,6 +1,6 @@
-<div id="nQuestao">
-    <label for="nQuestao">Numero da questão:</label>
-    <input type="text" name="nQuestao"  [(ngModel)]="nQuestao"/>
+<div id="nquestao">
+    <label for="nquestao">Numero da questão:</label>
+    <input type="text" name="nquestao"  [(ngModel)]="nquestao"/>
 </div>
 <div id="pergunta">
     <label for="pergunta">Pergunta:</label>
@@ -22,9 +22,20 @@
     <label for="respostaF3">Resposta Falsa3:</label>
     <input type="text" name="respostaF3"  [(ngModel)]="respostaF3"/>
 </div>
-
 <div id="ponto">
     <label for="ponto">Ponto:</label>
     <input type="text" name="ponto"  [(ngModel)]="ponto"/>
 </div>
+<!--
+<div id="jogador">
+    <label for="jogador">Jogador:</label>
+    <select name="jogadorId" [(ngModel)]="jogadorId">
+        <option *ngFor="let jogador of jogadores" value="{{jogador.id}}">
+            {{jogador.nome}}
+        </option>
+    </select>
+</div>
+-->
+
+
 <button (click)="cadastrar( )">Cadastrar</button>

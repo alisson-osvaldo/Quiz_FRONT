@@ -1,0 +1,15 @@
+<mat-card color= warn>
+    <mat-card-title> Deletar Jogador </mat-card-title>
+
+    <mat-card-content>
+
+        <mat-form-field >
+            <mat-label for="email">Confirme seu email</mat-label>
+            <input matInput placeholder="Informe o email do Jogador" type="string" name="email" [(ngModel)]="email"/>
+        </mat-form-field>
+        <mat-card-actions>
+            <button mat-raised-button color="warn" (click)="delete(email)">Deletar</button>
+        </mat-card-actions>
+
+    </mat-card-content>
+</mat-card>

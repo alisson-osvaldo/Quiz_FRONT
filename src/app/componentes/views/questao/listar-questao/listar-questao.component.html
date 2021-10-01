@@ -1,7 +1,8 @@
 <h1>Lista de Perguntas cadastradas</h1>
 <ol>
     <li *ngFor="let questao of questoes">
-        {{ questao.pergunta }} <br> A:{{questao.respostaC}} <br> B:{{questao.respostaF1}} <br>
+        Numero da Pergunta: {{questao.nquestao}} <br>
+        Pegunta: {{ questao.pergunta }} <br> A:{{questao.respostaC}} <br> B:{{questao.respostaF1}} <br>
         C:{{questao.respostaF2}} <br> D:{{questao.respostaF3}}
         <br><br>
         <!-- <a routerLink="/produto/cadastrar/{{ produto.id }}/{{}}">Editar Produto</a> -->
@@ -21,8 +22,12 @@
                 <a mat-list-item routerLink="/questao/cadastrar">Cadastrar Perguntas</a>
             </mat-list-item>
             <mat-list-item>
+                <mat-icon class="material-icons-outlined" mat-list-icon>edit</mat-icon>
+                <a mat-list-item routerLink="/questao/editar">Editar perguntas</a>
+            </mat-list-item>
+            <mat-list-item>
                 <mat-icon class="material-icons-outlined" mat-list-icon>app_registration</mat-icon>
-                <a mat-list-item routerLink="/questao/deletar">Deletar Pergunta</a>
+                <a mat-list-item routerLink="/questao/deletar/:nQuestao">Deletar Pergunta</a>
             </mat-list-item>
 
         </mat-nav-list>

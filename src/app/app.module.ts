@@ -30,6 +30,10 @@ import { NavComponent } from './componentes/template/nav/nav/nav.component';
 import { ContaJogadorComponent } from './componentes/views/jogador/conta-jogador/conta-jogador.component';
 import { JogarBuscarPerguntaComponent } from './componentes/views/jogar/jogar-buscar-pergunta/jogar-buscar-pergunta.component';
 import { JogarEnviarRespostaComponent } from './componentes/views/jogar/jogar-enviar-resposta/jogar-enviar-resposta.component';
+import { DeletarJogadorComponent } from './componentes/views/jogador/deletar-jogador/deletar-jogador.component';
+import { DeletarQuestaoComponent } from './componentes/views/questao/deletar-questao/deletar-questao.component';
+import { EditarJogadorComponent } from './componentes/views/jogador/editar-jogador/editar-jogador.component';
+import { EditarQuestaoComponent } from './componentes/views/questao/editar-questao/editar-questao.component';
 
 
 
@@ -48,7 +52,11 @@ import { JogarEnviarRespostaComponent } from './componentes/views/jogar/jogar-en
     NavComponent,
     ContaJogadorComponent,
     JogarBuscarPerguntaComponent,
-    JogarEnviarRespostaComponent
+    JogarEnviarRespostaComponent,
+    DeletarJogadorComponent,
+    DeletarQuestaoComponent,
+    EditarJogadorComponent,
+    EditarQuestaoComponent
 
 
   ],

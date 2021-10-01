@@ -19,4 +19,13 @@ export class QuestaoService {
     create(questao: Questao): Observable<Questao> {
         return this.http.post<Questao>(`${this.baseUrl}/create`, questao);
     }
+
+    delete(nQuestao: string): Observable<Questao> {
+        return this.http.delete<Questao>(`${this.baseUrl}/delete/${nQuestao}` );
+    }
+
+    update(questao: Questao): Observable<Questao> {
+        return this.http.put<Questao>(`${this.baseUrl}/update`, questao);
+    }
+
 }

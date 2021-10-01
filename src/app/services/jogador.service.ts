@@ -20,5 +20,12 @@ export class JogadorService {
         return this.http.post<Jogador>(`${this.baseUrl}/create`, jogador);
     }
 
+    delete(email: string): Observable<Jogador> {
+        return this.http.delete<Jogador>(`${this.baseUrl}/delete/${email}` );
+      }
+
+    update(jogador: Jogador): Observable<Jogador> {
+    return this.http.put<Jogador>(`${this.baseUrl}/update`, jogador);
+    }
 
 }

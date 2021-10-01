@@ -1,3 +1,7 @@
+import { EditarQuestaoComponent } from './componentes/views/questao/editar-questao/editar-questao.component';
+import { EditarJogadorComponent } from './componentes/views/jogador/editar-jogador/editar-jogador.component';
+import { DeletarQuestaoComponent } from './componentes/views/questao/deletar-questao/deletar-questao.component';
+import { DeletarJogadorComponent } from './componentes/views/jogador/deletar-jogador/deletar-jogador.component';
 import { JogarBuscarPerguntaComponent } from './componentes/views/jogar/jogar-buscar-pergunta/jogar-buscar-pergunta.component';
 import { ContaJogadorComponent } from './componentes/views/jogador/conta-jogador/conta-jogador.component';
 import { LoginComponent } from './componentes/views/login/login/login.component';
@@ -26,6 +30,14 @@ const routes: Routes = [
         path: "jogador/conta",
         component: ContaJogadorComponent
     },
+    {
+        path: "jogador/deletar/:email",
+        component: DeletarJogadorComponent,
+    },
+    {
+        path: "jogador/editar",
+        component: EditarJogadorComponent,
+    },
     //----------------------Questões-------------------------------
     {
         path: "questao/cadastrar",
@@ -35,6 +47,15 @@ const routes: Routes = [
         path: "questao/listar",
         component: ListarQuestaoComponent,
     },
+    {
+        path: "questao/deletar/:nQuestao",
+        component: DeletarQuestaoComponent,
+    },
+    {
+        path: "questao/editar",
+        component: EditarQuestaoComponent,
+    },
+    
     //-----------------------------Login--------------------------------
     {
         path: "login/entrar",
