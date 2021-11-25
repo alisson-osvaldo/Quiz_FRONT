@@ -1,15 +1,25 @@
-<div id="nome">
-    <label for="nome">Nome ou Apelido:</label>
-    <input type="text" name="nome"  [(ngModel)]="nome"/>
-</div>
-<div id="senha">
-    <label for="senha">Senha:</label>
-    <input type="text" name="senha"  [(ngModel)]="senha" />
-</div>
-<div id="email">
-    <label for="email">E-mail:</label>
-    <input type="text" name="email"  [(ngModel)]="email" />
-</div>
-<button (click)="cadastrar( )">Cadastrar</button>
+<mat-card>
 
+    <button mat-button color="accent"  routerLink="">← Voltar</button>
 
+    <mat-card-content>
+        <mat-form-field class="input" id="nome">
+            <mat-label for="nome">Nome:</mat-label>
+            <input matInput type="text" name="nome" [(ngModel)]="nome" />
+        </mat-form-field>
+        <br>
+        <mat-form-field class="input" id="email">
+            <mat-label for="email">E-mail:</mat-label>
+            <input matInput type="text" name="email"  [(ngModel)]="email" />
+        </mat-form-field>
+        <br>
+        <mat-form-field class="input" id="senha">
+            <mat-label for="senha">Senha:</mat-label>
+            <input matInput type="text" name="senha"  [(ngModel)]="senha" />
+        </mat-form-field>
+        <br>
+
+        <button mat-raised-button color="primary" (click)="cadastrar( )">Salvar</button>
+
+    </mat-card-content>
+</mat-card>

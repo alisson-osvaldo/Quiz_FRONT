@@ -9,6 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarQuestaoComponent implements OnInit {
     questoes: Questao[] = [];
+    colunasExibidas: String[] = [
+        "id",
+        "pergunta",
+        "respostaC",
+        "respostaF1",
+        "respostaF2",
+        "respostaF3",
+    ]
 
   constructor(private service: QuestaoService) { }
 

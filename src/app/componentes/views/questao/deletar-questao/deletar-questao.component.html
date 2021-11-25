@@ -4,11 +4,11 @@
     <mat-card-content>
 
         <mat-form-field >
-            <mat-label for="nquestao">Informe qual questão será deletada:</mat-label>
-            <input matInput placeholder="Informe o número da Pergunta" type="string" name="nquestao" [(ngModel)]="nquestao"/>
+            <mat-label for="id">Informe Id da Pergunta:</mat-label>
+            <input matInput placeholder="Informe o número da Pergunta" type="number" name="id" [(ngModel)]="id"/>
         </mat-form-field>
         <mat-card-actions>
-            <button mat-raised-button color="warn" (click)="delete(nquestao)">Deletar</button>
+            <button mat-raised-button color="warn" (click)="delete(id)">Deletar</button>
         </mat-card-actions>
 
     </mat-card-content>

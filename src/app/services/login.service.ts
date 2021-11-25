@@ -12,8 +12,11 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   //Cadastrar
-  /*entrar(email: string): Observable<Login> {
-    return this.http.post<Login>(`${this.baseUrl}getbylogin/${email}`);
+  create(login: Login): Observable<Login> {
+    return this.http.post<Login>(`${this.baseUrl}/create`, login);
     }
-    */
+
+    delete(): Observable<Login> {
+        return this.http.delete<Login>(`${this.baseUrl}/delete` );
+    }
 }

@@ -18,6 +18,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+
+
 // Import dos componentes da aplicação
 import { ListarJogadorComponent } from './componentes/views/jogador/listar-jogador/listar-jogador.component';
 import { CadastrarJogadorComponent } from './componentes/views/jogador/cadastrar-jogador/cadastrar-jogador.component';
@@ -34,6 +36,7 @@ import { DeletarJogadorComponent } from './componentes/views/jogador/deletar-jog
 import { DeletarQuestaoComponent } from './componentes/views/questao/deletar-questao/deletar-questao.component';
 import { EditarJogadorComponent } from './componentes/views/jogador/editar-jogador/editar-jogador.component';
 import { EditarQuestaoComponent } from './componentes/views/questao/editar-questao/editar-questao.component';
+import { MenuComponent } from './componentes/views/menu/menu/menu.component';
 
 
 
@@ -56,7 +59,8 @@ import { EditarQuestaoComponent } from './componentes/views/questao/editar-quest
     DeletarJogadorComponent,
     DeletarQuestaoComponent,
     EditarJogadorComponent,
-    EditarQuestaoComponent
+    EditarQuestaoComponent,
+    MenuComponent
 
 
   ],

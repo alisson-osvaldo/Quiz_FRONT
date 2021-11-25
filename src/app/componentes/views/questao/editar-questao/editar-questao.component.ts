@@ -30,7 +30,6 @@ export class EditarQuestaoComponent implements OnInit {
       respostaF1: this.respostaF1,
       respostaF2: this.respostaF2,
       respostaF3: this.respostaF3,
-      ponto: this.ponto,
       jogadorId: this.jogadorId
     };
     this.service.update(questao).subscribe((questao) => {

@@ -20,12 +20,17 @@ export class QuestaoService {
         return this.http.post<Questao>(`${this.baseUrl}/create`, questao);
     }
 
-    delete(nQuestao: string): Observable<Questao> {
-        return this.http.delete<Questao>(`${this.baseUrl}/delete/${nQuestao}` );
+    delete(id: number): Observable<Questao> {
+        return this.http.delete<Questao>(`${this.baseUrl}/delete/${id}` );
     }
 
     update(questao: Questao): Observable<Questao> {
         return this.http.put<Questao>(`${this.baseUrl}/update`, questao);
+    }
+
+     //Buscar pergunta por Id
+     getbyid(id: number): Observable<Questao[]> {
+        return this.http.get<Questao[]>(`${this.baseUrl}/getbyid/${id}`);
     }
 
 }

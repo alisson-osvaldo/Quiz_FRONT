@@ -1,11 +1,14 @@
-ol{
-    margin-left: 235px;
- }
 
- h1{
+h1{
     margin-left: 250px;
- }
+}
 
 mat-sidenav-content{
     padding: 16px;
+}
+
+table {
+    margin-left: 243px;
+    width: 81.6%;
+    margin-top: 16px;
 }

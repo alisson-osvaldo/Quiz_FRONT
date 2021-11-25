@@ -1,3 +1,4 @@
+import { MenuComponent } from './componentes/views/menu/menu/menu.component';
 import { EditarQuestaoComponent } from './componentes/views/questao/editar-questao/editar-questao.component';
 import { EditarJogadorComponent } from './componentes/views/jogador/editar-jogador/editar-jogador.component';
 import { DeletarQuestaoComponent } from './componentes/views/questao/deletar-questao/deletar-questao.component';
@@ -16,6 +17,11 @@ const routes: Routes = [
     {
         path: "",
         component: LoginComponent
+    },
+    //---------------------------Menu----------------------------
+    {
+        path: "menu",
+        component: MenuComponent,
     },
     //---------------------------Jogador---------------------------
     {
@@ -55,7 +61,7 @@ const routes: Routes = [
         path: "questao/editar",
         component: EditarQuestaoComponent,
     },
-    
+
     //-----------------------------Login--------------------------------
     {
         path: "login/entrar",

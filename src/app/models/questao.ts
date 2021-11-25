@@ -6,7 +6,7 @@ export interface Questao {
     respostaF1:     string;
     respostaF2:     string;
     respostaF3:     string;
-    ponto:         number;
+    //ponto:         number;
     jogadorId:    number;
     criadoem?: number;
 }

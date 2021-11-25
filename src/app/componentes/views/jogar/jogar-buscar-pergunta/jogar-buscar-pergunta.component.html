@@ -1,7 +1,81 @@
+
+
 <ol>
     <li *ngFor="let questao of questoes">
-        {{ questao.pergunta }} <br> A:{{questao.respostaC}}
-        <br><br>
+        {{ questao.pergunta }}
+        <br>
+        <label for="jogar">Resposta:</label>
+        <select name="jogar" [(ngModel)]="resposta">
+          <option  value="A"> A </option>
+          <option  value="B"> B </option>
+          <option  value="C"> B </option>
+          <option  value="D"> C </option>
+        </select>
+
+    <br><br>
         <!-- <a routerLink="/produto/cadastrar/{{ produto.id }}/{{}}">Editar Produto</a> -->
     </li>
 </ol>
+
+
+<!--Ainda tem q deixar isso direto ID 1 -> 2 -> 3 -->
+<div id="questaoId">
+    <label for="questaoId">passar questaoId para cadastra resposta:</label>
+    <input type="number" name="questaoId"  [(ngModel)]="questaoId" />
+</div>
+
+
+
+<!--
+<div>
+    <label for="questao">Resposta:</label>
+    <select name="questao" [(ngModel)]="questaoId">
+        <option *ngFor="let questao of questoes" value="{{ questao.respostaC }}">
+            {{ questao.respostaC }}
+        </option>
+    </select>
+</div>
+-->
+
+
+<br>
+<button (click)="cadastrar( )">Enviar</button>
+<br>
+<button (click)="getbyid(questaoId)">Proximo</button>
+
+<!--
+<ol>
+    <li *ngFor="let questao of questoes">
+        {{questao.pergunta}}
+    </li>
+</ol>
+-->
+
+
+<br>
+
+
+
+
+
+
+
+<!--
+<mat-grid-list cols="1" rowHeight="5:1" [gutterSize]=" '16px' ">
+    <mat-grid-tile *ngFor="let questao of questoes">
+        {{ questao.pergunta }}
+
+        <label for="jogar">Resposta:</label>
+        <select name="jogar" [(ngModel)]="resposta">
+          <option  value="A"> A </option>
+          <option  value="B"> B </option>
+          <option  value="C"> B </option>
+          <option  value="D"> C </option>
+        </select>
+
+    </mat-grid-tile>
+</mat-grid-list>
+
+-->
+
+

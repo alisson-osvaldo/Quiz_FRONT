@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import { Jogador } from 'src/app/models/jogador';
 import { JogadorService } from 'src/app/services/jogador.service';
 
@@ -9,6 +10,11 @@ import { JogadorService } from 'src/app/services/jogador.service';
 })
 export class ListarJogadorComponent implements OnInit {
     jogadores: Jogador[] = [];
+    colunasExibidas: String[] = [
+        "nome",
+        "email",
+        "pontuacao",
+    ];
 
     constructor(private service: JogadorService) {}
 

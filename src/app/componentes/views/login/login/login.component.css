@@ -1,0 +1,9 @@
+button{
+    background-color: rgb(141, 32, 168);
+}
+
+mat-card{
+    position: relative;
+    height: 74.3vh;
+    width: 97.6vw;
+}

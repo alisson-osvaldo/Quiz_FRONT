@@ -16,7 +16,6 @@ export class CadastrarQuestaoComponent implements OnInit {
     respostaF1!:   string;
     respostaF2!:   string;
     respostaF3!:   string;
-    ponto!:       number;
     jogadorId!: number;
 
     jogadores!:  Jogador[];
@@ -34,7 +33,6 @@ export class CadastrarQuestaoComponent implements OnInit {
        respostaF1: this.respostaF1,
        respostaF2: this.respostaF2,
        respostaF3: this.respostaF3,
-       ponto:     this.ponto,
        jogadorId: this.jogadorId
     }
     this.service.create(questao).subscribe((questao) => {
