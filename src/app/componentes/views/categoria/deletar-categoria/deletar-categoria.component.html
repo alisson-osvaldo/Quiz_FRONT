@@ -1,0 +1,16 @@
+<mat-card color= warn>
+    <button mat-button color="accent"  routerLink="/categoria/listar">← Voltar</button><br><br>
+    <mat-card-content>
+
+        <mat-card-title> Deletar Categoria </mat-card-title>
+
+        <mat-form-field >
+            <mat-label for="id">Informe Id da Categoria:</mat-label>
+            <input matInput placeholder="Informe o Id da Categoria" type="number" name="id" [(ngModel)]="id"/>
+        </mat-form-field>
+
+         <br><button mat-raised-button color="warn" (click)="delete(id)">Deletar</button>
+
+    </mat-card-content>
+</mat-card>
+

@@ -9,14 +9,15 @@ import { Questao } from 'src/app/models/questao';
   styleUrls: ['./editar-questao.component.css']
 })
 export class EditarQuestaoComponent implements OnInit {
-    nquestao!:         string;
     pergunta!:          string;
-    respostaC!:        string;
-    respostaF1!:      string;
-    respostaF2!:      string;
-    respostaF3!:      string;
-    ponto!:              number;
-    jogadorId!:        number;
+    respostaCerta!:        string;
+    resposta1!:      string;
+    resposta2!:      string;
+    resposta3!:      string;
+    resposta4!:      string;
+    ponto!:             number;
+    jogadorId!:       number;
+    categoriaId!:       number;
 
   constructor(private router: Router, private service: QuestaoService) { }
 
@@ -24,13 +25,14 @@ export class EditarQuestaoComponent implements OnInit {
 
   update(): void {
     let questao: Questao = {
-      nquestao: this.nquestao,
       pergunta: this.pergunta,
-      respostaC: this.respostaC,
-      respostaF1: this.respostaF1,
-      respostaF2: this.respostaF2,
-      respostaF3: this.respostaF3,
-      jogadorId: this.jogadorId
+      respostaCerta: this.respostaCerta,
+      resposta1: this.resposta1,
+      resposta2: this.resposta2,
+      resposta3: this.resposta3,
+      resposta4: this.resposta3,
+      jogadorId: this.jogadorId,
+      categoriaId: this.categoriaId
     };
     this.service.update(questao).subscribe((questao) => {
         console.log(questao);

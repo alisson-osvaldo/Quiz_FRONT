@@ -29,8 +29,8 @@ export class QuestaoService {
     }
 
      //Buscar pergunta por Id
-     getbyid(id: number): Observable<Questao[]> {
-        return this.http.get<Questao[]>(`${this.baseUrl}/getbyid/${id}`);
+     getbyid(questaoId: number): Observable<Questao[]> {
+        return this.http.get<Questao[]>(`${this.baseUrl}/getbyid/${questaoId}`);
     }
 
 }

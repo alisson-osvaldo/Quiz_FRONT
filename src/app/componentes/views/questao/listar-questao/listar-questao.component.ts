@@ -12,10 +12,11 @@ export class ListarQuestaoComponent implements OnInit {
     colunasExibidas: String[] = [
         "id",
         "pergunta",
-        "respostaC",
-        "respostaF1",
-        "respostaF2",
-        "respostaF3",
+        "respostaCerta",
+        "resposta1",
+        "resposta2",
+        "resposta3",
+        "resposta4"
     ]
 
   constructor(private service: QuestaoService) { }

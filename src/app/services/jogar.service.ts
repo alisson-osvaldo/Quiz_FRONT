@@ -27,6 +27,12 @@ export class JogarService {
         return this.http.get<Jogar>(`${this.baseUrl}/getbyid/${id}`);
     }
 
+    //Buscar resposta por Id
+    getbyresposta(id: number, resposta: string): Observable<Jogar> {
+        return this.http.get<Jogar>(`${this.baseUrl}/getbyresposta/${id}/${resposta}`);
+    }
+
+ 
 
 
 }

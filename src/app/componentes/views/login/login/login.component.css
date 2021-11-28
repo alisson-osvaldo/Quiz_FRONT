@@ -7,3 +7,10 @@ mat-card{
     height: 74.3vh;
     width: 97.6vw;
 }
+
+mat-card-content{
+    padding: 3%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}

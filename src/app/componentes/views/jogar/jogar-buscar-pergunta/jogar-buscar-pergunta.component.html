@@ -1,58 +1,60 @@
+<button mat-raised-button color="accent"  routerLink="/jogador/listar">← Voltar</button>
+
+<mat-card>
+    <mat-grid-list cols="1" rowHeight="350px" [gutterSize]="'10px'">
+        <mat-grid-tile *ngFor="let questao of questoes">
+            <mat-card>
+                <mat-card-content>
+                    <mat-card-title>
+                    {{questao.id}}- {{ questao.pergunta }}
+                    </mat-card-title>
+
+                    <div id="questaoId">
+                        <h4>(ATENÇÂO Não conseguimos passar o Id da pergunta altomáticamente ↓)</h4>
+                        <label for="questaoId">passar número da pergunta aqui:</label>
+                        <input type="number" name="questaoId"  [(ngModel)]="questaoId" />
+                    </div><br>
+
+                    <mat-card-subtitle>
+                    <label for="jogar">Resposta:</label>
+                    <mat-radio-group aria-label="Select an option"  [(ngModel)]="resposta">
+                        <br>
+                        <mat-radio-button value="{{questao.resposta1}}">{{questao.resposta1}}</mat-radio-button>
+                        <br>
+                        <mat-radio-button value="{{questao.resposta2}}">{{questao.resposta2}}</mat-radio-button>
+                        <br>
+                        <mat-radio-button value="{{questao.resposta3}}">{{questao.resposta3}}</mat-radio-button>
+                        <br>
+                        <mat-radio-button value="{{questao.resposta4}}">{{questao.resposta4}}</mat-radio-button>
+                    </mat-radio-group>
+                    </mat-card-subtitle>
 
 
+                    <br><button mat-raised-button color="primary" (click)="cadastrar( )">Enviar</button>
+
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-card>
+
+<!--
 <ol>
     <li *ngFor="let questao of questoes">
-        {{ questao.pergunta }}
+        {{ questao.pergunta }}{{questao.id}}
         <br>
         <label for="jogar">Resposta:</label>
         <select name="jogar" [(ngModel)]="resposta">
-          <option  value="A"> A </option>
-          <option  value="B"> B </option>
-          <option  value="C"> B </option>
-          <option  value="D"> C </option>
+        <option  value="A"> A </option>
+        <option  value="B"> B </option>
+        <option  value="C"> C </option>
+        <option  value="D"> D </option>
         </select>
-
-    <br><br>
-        <!-- <a routerLink="/produto/cadastrar/{{ produto.id }}/{{}}">Editar Produto</a> -->
-    </li>
-</ol>
-
-
-<!--Ainda tem q deixar isso direto ID 1 -> 2 -> 3 -->
-<div id="questaoId">
-    <label for="questaoId">passar questaoId para cadastra resposta:</label>
-    <input type="number" name="questaoId"  [(ngModel)]="questaoId" />
-</div>
-
-
-
-<!--
-<div>
-    <label for="questao">Resposta:</label>
-    <select name="questao" [(ngModel)]="questaoId">
-        <option *ngFor="let questao of questoes" value="{{ questao.respostaC }}">
-            {{ questao.respostaC }}
-        </option>
-    </select>
-</div>
--->
-
-
-<br>
-<button (click)="cadastrar( )">Enviar</button>
-<br>
-<button (click)="getbyid(questaoId)">Proximo</button>
-
-<!--
-<ol>
-    <li *ngFor="let questao of questoes">
-        {{questao.pergunta}}
     </li>
 </ol>
 -->
 
 
-<br>
 
 
 
@@ -60,22 +62,10 @@
 
 
 
-<!--
-<mat-grid-list cols="1" rowHeight="5:1" [gutterSize]=" '16px' ">
-    <mat-grid-tile *ngFor="let questao of questoes">
-        {{ questao.pergunta }}
 
-        <label for="jogar">Resposta:</label>
-        <select name="jogar" [(ngModel)]="resposta">
-          <option  value="A"> A </option>
-          <option  value="B"> B </option>
-          <option  value="C"> B </option>
-          <option  value="D"> C </option>
-        </select>
 
-    </mat-grid-tile>
-</mat-grid-list>
 
--->
+
+
 
 

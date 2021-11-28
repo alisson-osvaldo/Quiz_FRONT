@@ -10,14 +10,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class DeletarQuestaoComponent implements OnInit {
     id!:              number;
-    nquestao!:   string;
     pergunta!:    string;
-    respostaC!:  string;
-    respostaF1!: string;
-    respostaF2!: string;
-    respostaF3!: string;
+    respostaCerta!:  string;
+    resposta1!: string;
+    resposta2!: string;
+    resposta3!: string;
+    resposta4!: string;
     jogadorId!:   number;
-
+    categoriaId!: number;
+    
   constructor(private service: QuestaoService, private router: Router, private snack: MatSnackBar) { }
 
   ngOnInit(): void {}

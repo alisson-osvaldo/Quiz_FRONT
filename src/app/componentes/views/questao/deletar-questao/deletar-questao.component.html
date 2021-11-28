@@ -1,15 +1,14 @@
 <mat-card color= warn>
-    <mat-card-title> Deletar Pergunta </mat-card-title>
-
     <mat-card-content>
+
+        <mat-card-title> Deletar Pergunta </mat-card-title>
 
         <mat-form-field >
             <mat-label for="id">Informe Id da Pergunta:</mat-label>
             <input matInput placeholder="Informe o número da Pergunta" type="number" name="id" [(ngModel)]="id"/>
         </mat-form-field>
-        <mat-card-actions>
-            <button mat-raised-button color="warn" (click)="delete(id)">Deletar</button>
-        </mat-card-actions>
+
+         <button mat-raised-button color="warn" (click)="delete(id)">Deletar</button>
 
     </mat-card-content>
 </mat-card>

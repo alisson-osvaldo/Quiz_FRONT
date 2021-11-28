@@ -17,6 +17,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 
@@ -31,14 +32,13 @@ import { LoginComponent } from './componentes/views/login/login/login.component'
 import { NavComponent } from './componentes/template/nav/nav/nav.component';
 import { ContaJogadorComponent } from './componentes/views/jogador/conta-jogador/conta-jogador.component';
 import { JogarBuscarPerguntaComponent } from './componentes/views/jogar/jogar-buscar-pergunta/jogar-buscar-pergunta.component';
-import { JogarEnviarRespostaComponent } from './componentes/views/jogar/jogar-enviar-resposta/jogar-enviar-resposta.component';
 import { DeletarJogadorComponent } from './componentes/views/jogador/deletar-jogador/deletar-jogador.component';
 import { DeletarQuestaoComponent } from './componentes/views/questao/deletar-questao/deletar-questao.component';
 import { EditarJogadorComponent } from './componentes/views/jogador/editar-jogador/editar-jogador.component';
 import { EditarQuestaoComponent } from './componentes/views/questao/editar-questao/editar-questao.component';
-import { MenuComponent } from './componentes/views/menu/menu/menu.component';
-
-
+import { CadastrarCategoriaComponent } from './componentes/views/categoria/cadastrar-categoria/cadastrar-categoria.component';
+import { ListarCategoriaComponent } from './componentes/views/categoria/listar-categoria/listar-categoria.component';
+import { DeletarCategoriaComponent } from './componentes/views/categoria/deletar-categoria/deletar-categoria.component';
 
 
 
@@ -55,12 +55,13 @@ import { MenuComponent } from './componentes/views/menu/menu/menu.component';
     NavComponent,
     ContaJogadorComponent,
     JogarBuscarPerguntaComponent,
-    JogarEnviarRespostaComponent,
     DeletarJogadorComponent,
     DeletarQuestaoComponent,
     EditarJogadorComponent,
     EditarQuestaoComponent,
-    MenuComponent
+    CadastrarCategoriaComponent,
+    ListarCategoriaComponent,
+    DeletarCategoriaComponent
 
 
   ],
@@ -81,7 +82,8 @@ import { MenuComponent } from './componentes/views/menu/menu/menu.component';
     MatSelectModule,
     MatTableModule,
     MatGridListModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

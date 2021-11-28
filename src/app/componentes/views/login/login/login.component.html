@@ -1,24 +1,29 @@
 <mat-card color= warn>
-    <h1><b>Login</b></h1>
+    <mat-card-content>
+        <h1><b>Login</b></h1>
 
-    <div id="email">
-        <label for="email">E-mail:</label>
-        <input type="text" name="email"  [(ngModel)]="email"/>
-    </div>
-    <div id="senha">
-        <label for="senha">Senha:</label>
-        <input type="text" name="senha"  [(ngModel)]="senha"/>
-    </div>
-    <br>
-    <button mat-button color="accent" (click)="entrar( )">Entrar</button>
+        <mat-form-field class="input" id="email">
+            <mat-label for="email">E-mail:</mat-label>
+            <input matInput type="text" name="email" [(ngModel)]="email" />
+        </mat-form-field>
 
-    <br><br><br>
+        <mat-form-field class="input" id="senha">
+            <mat-label for="senha">Senha:</mat-label>
+            <input matInput type="text" name="number" [(ngModel)]="senha" />
+        </mat-form-field>
 
-    <h2>Não tem uma conta? <br> Clique aqui ↓</h2>
-    <a mat-raised-button color="primary" routerLink="jogador/cadastrar">
-        <mat-icon>event</mat-icon>
-        Criar Conta
-    </a>
+
+        <button mat-button color="accent" (click)="entrar( )">Entrar</button>
+
+        <br><br>
+
+        <h2>Não tem uma conta? <br> Clique Aqui ↓</h2>
+        <a mat-raised-button color="primary" routerLink="jogador/cadastrar">
+            <mat-icon>event</mat-icon>
+            Criar Conta
+        </a>
+
+    </mat-card-content>
 </mat-card>
 
 

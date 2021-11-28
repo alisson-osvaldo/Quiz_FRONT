@@ -1,3 +1,5 @@
+import { CategoriaService } from './../../../../services/categoria.service';
+import { Categoria } from './../../../../models/categoria';
 import { Jogador } from './../../../../models/jogador';
 import { Questao } from './../../../../models/questao';
 import { QuestaoService } from './../../../../services/questao.service';
@@ -10,30 +12,37 @@ import { Router } from '@angular/router';
   styleUrls: ['./cadastrar-questao.component.css']
 })
 export class CadastrarQuestaoComponent implements OnInit {
-    nquestao!: string;
     pergunta!:  string;
-    respostaC!:   string;
-    respostaF1!:   string;
-    respostaF2!:   string;
-    respostaF3!:   string;
-    jogadorId!: number;
+    respostaCerta!:   string;
+    resposta1!:   string;
+    resposta2!:   string;
+    resposta3!:   string;
+    resposta4!:   string;
+    jogadorId!:  number;
 
     jogadores!:  Jogador[];
 
+    categorias!: Categoria[];
+    categoriaId!: number;
 
-  constructor(private router: Router, private service: QuestaoService) { }
+  constructor(private router: Router, private service: QuestaoService, private categoriaService: CategoriaService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.categoriaService.list().subscribe((categorias) => {
+        this.categorias = categorias;
+    });
+  }
 
   cadastrar( ): void{
     let questao: Questao = {
-       nquestao: this.nquestao,
        pergunta: this.pergunta,
-       respostaC: this.respostaC,
-       respostaF1: this.respostaF1,
-       respostaF2: this.respostaF2,
-       respostaF3: this.respostaF3,
-       jogadorId: this.jogadorId
+       respostaCerta: this.respostaCerta,
+       resposta1: this.resposta1,
+       resposta2: this.resposta2,
+       resposta3: this.resposta3,
+       resposta4: this.resposta4,
+       jogadorId: this.jogadorId,
+       categoriaId: this.categoriaId
     }
     this.service.create(questao).subscribe((questao) => {
       console.log(questao);

@@ -3,6 +3,10 @@ h1{
     margin-left: 220px;
 }
 
+h5{
+    margin-left: 220px;
+}
+
 mat-sidenav-content{
     padding: 16px;
 }

@@ -2,38 +2,54 @@
     <button mat-button color="accent"  routerLink="/questao/listar">← Voltar</button>
 
     <mat-card-content>
-        <mat-form-field class="input" id="nquestao">
-            <mat-label for="nquestao">Número da questão:</mat-label>
-            <input matInput type="text" name="nquestao" [(ngModel)]="nquestao" />
-        </mat-form-field>
-        <br>
         <mat-form-field class="input" id="pergunta">
             <mat-label for="pergunta">Pergunta:</mat-label>
             <input matInput type="text" name="pergunta" [(ngModel)]="pergunta" />
         </mat-form-field>
         <br>
-        <mat-form-field class="input" id="respostaC">
-            <mat-label for="respostaC">Resposta Correta:</mat-label>
-            <input matInput type="text" name="respostaC" [(ngModel)]="respostaC" />
-        </mat-form-field>
-        <br>
-        <mat-form-field class="input" id="respostaF1">
-            <mat-label for="respostaF1">Resposta Incorreta1:</mat-label>
-            <input matInput type="text" name="respostaF1" [(ngModel)]="respostaF1" />
-        </mat-form-field>
-        <br>
-        <mat-form-field class="input" id="respostaF2">
-            <mat-label for="respostaF2">Resposta Incorreta2:</mat-label>
-            <input matInput type="text" name="respostaF2" [(ngModel)]="respostaF2" />
-        </mat-form-field>
-        <br>
-        <mat-form-field class="input" id="respostaF3">
-            <mat-label for="respostaF3">Resposta Incorreta3:</mat-label>
-            <input matInput type="text" name="respostaF3" [(ngModel)]="respostaF3" />
+
+        <mat-form-field class="input" id="categoria">
+            <mat-label for="categoria">Categoria:</mat-label>
+            <mat-select name="categoria" [(ngModel)]="categoriaId">
+                <mat-option
+                    *ngFor="let categoria of categorias"
+                    value="{{ categoria.id }}"
+                >
+                    {{ categoria.nome }}
+                </mat-option>
+            </mat-select>
         </mat-form-field>
         <br>
 
-        <button mat-raised-button color="primary" (click)="cadastrar( )">Cadastrar</button>
+        <mat-form-field class="input" id="respostaCerta">
+            <mat-label for="respostaCerta">Resposta Correta:</mat-label>
+            <input matInput type="text" name="respostaCerta" [(ngModel)]="respostaCerta" />
+        </mat-form-field>
+
+        <h2>Copie e Cole a (Resposta Correta↑) em uma das opçoes a baixo ↓</h2>
+        <h4>Onde ficara a resposta correta</h4>
+        --
+        <mat-form-field class="input" id="resposta1">
+            <mat-label for="resposta1">Resposta 1:</mat-label>
+            <input matInput type="text" name="resposta1" [(ngModel)]="resposta1" />
+        </mat-form-field>
+        --
+        <mat-form-field class="input" id="resposta2">
+            <mat-label for="resposta2">Resposta 2:</mat-label>
+            <input matInput type="text" name="resposta2" [(ngModel)]="resposta2" />
+        </mat-form-field>
+        --
+        <mat-form-field class="input" id="resposta3">
+            <mat-label for="resposta3">Resposta 3:</mat-label>
+            <input matInput type="text" name="resposta3" [(ngModel)]="resposta3" />
+        </mat-form-field>
+        --
+        <mat-form-field class="input" id="resposta4">
+            <mat-label for="resposta4">Resposta 4:</mat-label>
+            <input matInput type="text" name="resposta4" [(ngModel)]="resposta4" />
+        </mat-form-field>
+
+            <br><br><br><button mat-raised-button color="primary" (click)="cadastrar( )" class="cadastrar">Cadastrar</button>
 
     </mat-card-content>
 </mat-card>

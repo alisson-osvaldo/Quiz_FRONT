@@ -1,4 +1,6 @@
-import { MenuComponent } from './componentes/views/menu/menu/menu.component';
+import { DeletarCategoriaComponent } from './componentes/views/categoria/deletar-categoria/deletar-categoria.component';
+import { ListarCategoriaComponent } from './componentes/views/categoria/listar-categoria/listar-categoria.component';
+import { CadastrarCategoriaComponent } from './componentes/views/categoria/cadastrar-categoria/cadastrar-categoria.component';
 import { EditarQuestaoComponent } from './componentes/views/questao/editar-questao/editar-questao.component';
 import { EditarJogadorComponent } from './componentes/views/jogador/editar-jogador/editar-jogador.component';
 import { DeletarQuestaoComponent } from './componentes/views/questao/deletar-questao/deletar-questao.component';
@@ -17,11 +19,6 @@ const routes: Routes = [
     {
         path: "",
         component: LoginComponent
-    },
-    //---------------------------Menu----------------------------
-    {
-        path: "menu",
-        component: MenuComponent,
     },
     //---------------------------Jogador---------------------------
     {
@@ -71,6 +68,19 @@ const routes: Routes = [
     {
         path: "jogar/Pergunta",
         component: JogarBuscarPerguntaComponent,
+    },
+    //----------------------------Categorias----------------------------
+    {
+        path:"categoria/cadastrar",
+        component: CadastrarCategoriaComponent,
+    },
+    {
+        path:"categoria/listar",
+        component: ListarCategoriaComponent,
+    },
+    {
+        path:"categoria/deletar",
+        component: DeletarCategoriaComponent,
     }
 
 ];

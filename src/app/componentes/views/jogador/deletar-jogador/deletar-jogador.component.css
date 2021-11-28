@@ -1,0 +1,12 @@
+mat-card{
+    position: relative;
+    height: 74.3vh;
+    width: 97.6vw;
+}
+
+mat-card-content{
+    padding: 7%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}

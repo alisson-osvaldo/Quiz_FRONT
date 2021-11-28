@@ -1,0 +1,14 @@
+<mat-card>
+    <button mat-button color="accent"  routerLink="/categoria/listar">← Voltar</button><br><br>
+
+    <h1>Cadastrar Categoria Das Perguntas</h1>
+
+    <mat-card-content>
+        <mat-form-field class="input" id="nome">
+            <mat-label for="nome">Nome da Categoria::</mat-label>
+            <input matInput type="text" name="nome" [(ngModel)]="nome" />
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="cadastrar( )">Cadastrar</button>
+    </mat-card-content>
+</mat-card>
